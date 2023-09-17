@@ -1,0 +1,298 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta content="" name="description">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <meta content="" property="og:title">
+  <meta content="" property="og:type">
+  <meta content="" property="og:url">
+  <meta content="" property="og:image">
+
+  <link href="site.webmanifest" rel="manifest">
+  <link href="icon.png" rel="apple-touch-icon">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        referrerpolicy="no-referrer" rel="stylesheet"/>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+
+  <link href="css/loader.css" rel="stylesheet"/>
+  <link href="css/hamburger.css" rel="stylesheet"/>
+  <link href="css/nav.css" rel="stylesheet">
+  <link href="css/variables.css" rel="stylesheet">
+  <link href="css/home.css" rel="stylesheet"/>
+  <link href="css/about.css" rel="stylesheet"/>
+  <link href="css/services.css" rel="stylesheet">
+  <link href="css/portfolio.css" rel="stylesheet"/>
+  <link href="css/blog.css" rel="stylesheet"/>
+  <link href="css/contact.css" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet"/>
+  <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+
+  <meta content="#fafafa" name="theme-color">
+</head>
+
+<body onload="loaded()">
+<div class="loader">
+  <svg class="bike" height="30px" viewBox="0 0 48 30" width="48px">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
+      <g transform="translate(9.5,19)">
+        <circle class="bike__tire" r="9" stroke-dasharray="56.549 56.549"/>
+        <g class="bike__spokes-spin" stroke-dasharray="31.416 31.416" stroke-dashoffset="-23.562">
+          <circle class="bike__spokes" r="5"/>
+          <circle class="bike__spokes" r="5" transform="rotate(180,0,0)"/>
+        </g>
+      </g>
+      <g transform="translate(24,19)">
+        <g class="bike__pedals-spin" stroke-dasharray="25.133 25.133" stroke-dashoffset="-21.991"
+           transform="rotate(67.5,0,0)">
+          <circle class="bike__pedals" r="4"/>
+          <circle class="bike__pedals" r="4" transform="rotate(180,0,0)"/>
+        </g>
+      </g>
+      <g transform="translate(38.5,19)">
+        <circle class="bike__tire" r="9" stroke-dasharray="56.549 56.549"/>
+        <g class="bike__spokes-spin" stroke-dasharray="31.416 31.416" stroke-dashoffset="-23.562">
+          <circle class="bike__spokes" r="5"/>
+          <circle class="bike__spokes" r="5" transform="rotate(180,0,0)"/>
+        </g>
+      </g>
+      <polyline class="bike__seat" points="14 3,18 3" stroke-dasharray="5 5"/>
+      <polyline class="bike__body" points="16 3,24 19,9.5 19,18 8,34 7,24 19" stroke-dasharray="79 79"/>
+      <path class="bike__handlebars" d="m30,2h6s1,0,1,1-1,1-1,1" stroke-dasharray="10 10"/>
+      <polyline class="bike__front" points="32.5 2,38.5 19" stroke-dasharray="19 19"/>
+    </g>
+  </svg>
+</div>
+
+<script>
+  let loader = document.querySelector(".loader");
+
+  function loaded() {
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 10000);
+  }
+</script>
+
+<!-- Add your site or application content here -->
+
+<!-- HAMBURGER MENU BUTTON (responsively visible) -->
+<div class="hamburger">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+
+<!-- THE REAL NAVIGATION -->
+<nav class="navigation">
+  <img alt="logo" src="/icon.png">
+  <ul>
+    <li><a href="#" onclick="home()"><i class="fa fa-house fa-fade" style="padding-right: 25px;"></i>home</a></li>
+    <li>
+      <a href="#" onclick="about();"><i class="fa fa-user fa-fade" style="padding-right: 25px;"></i>about</a>
+    </li>
+    <li><a href="#" onclick="services();"><i class="fa fa-sliders fa-fade"
+                                             style="padding-right: 25px;"></i>services</a></li>
+    <li><a href="#" onclick="portfolio()"><i class="fa-brands fa-stack-overflow fa-fade"
+                                             style="padding-right: 25px;"></i>portfolio</a></li>
+    <li><a href="#" onclick="blog()"><i class="fa fa-newspaper fa-fade" style="padding-right: 25px;"></i>blog</a></li>
+    <li>
+      <a href="#" onclick="contact();"><i class="fa fa-paper-plane fa-fade" style="padding-right: 25px;"></i>contact</a>
+    </li>
+  </ul>
+  <p>&copy; 2021 HAC.</p>
+</nav>
+
+<div class="container">
+  <div class="layer layer1 active">
+    <div class="home main">
+      <div class="content-for-home">
+        <div class="greet">
+          <h1> Hello there <span class="hand-wave">👋</span>,</h1>
+          <script src="js/greet.js"></script>
+        </div>
+        <div class="typewriter">
+          <h1>HK<span>-AXL-</span>CODER,,</h1>
+          <script src="js/typewriter.js"></script>
+        </div>
+        <div class="img-container"></div>
+        <div class="social-icons">
+          <div class="heading">
+            <h2>FIND ME ON</h2>
+            <h3>Feel free to <span>connect</span> with me </h3>
+          </div>
+          <div class="s-icon">
+            <a href="#">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <div class="s-name">Facebook</div>
+          </div>
+          <div class="s-icon">
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <div class="s-name">Tweeter</div>
+          </div>
+          <div class="s-icon">
+            <a href="#">
+              <i class="fab fa-github"></i>
+            </a>
+            <div class="s-name">GitHub</div>
+          </div>
+          <div class="s-icon">
+            <a href="#">
+              <i class="fab fa-codepen"></i>
+            </a>
+            <div class="s-name">CodePen</div>
+          </div>
+          <div class="s-icon">
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <div class="s-name">Instagram</div>
+          </div>
+          <div class="s-icon">
+            <a href="#">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <div class="s-name">Email</div>
+          </div>
+        </div>
+        <p>HOME</p>
+      </div>
+    </div>
+  </div>
+  <div class="layer layer2">
+    <div class="about main">
+      <div class="styling">
+        <div class="ball-1"></div>
+        <div class="ball-2"></div>
+        <div class="ball-3"></div>
+        <div class="ball-4"></div>
+        <div class="absolute box"></div>
+        <div class="absolute circle"></div>
+        <div class="absolute triangle"></div>
+        <div class="face face2"></div>
+        <svg
+          class="wave absolute"
+          viewBox="0 0 1450 320"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0,320L48,277.3C96,235,192,149,288,122.7C384,96,480,128,576,165.3C672,203,768,245,864,234.7C960,224,1056,160,1152,112C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            fill-opacity="1"
+          ></path>
+        </svg>
+
+        <svg
+          class="wave absolute opposite"
+          viewBox="0 0 1450 320"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0,224L48,213.3C96,203,192,181,288,192C384,203,480,245,576,218.7C672,192,768,96,864,64C960,32,1056,64,1152,101.3C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            fill-opacity="1"
+          ></path>
+        </svg>
+      </div>
+      <!-- REAL CONTENT -->
+      <div class="wrapper">
+        <div class="face face1">
+          <div class="content">
+            <p>Hello,</p>
+            <h1>I'm Gideon</h1>
+            <p class="text">
+              My name is <span>Gideon</span>, and I'm a student at <span>Kenyatta University,Kenya</span> currently
+              undertaking <span>BSc.Computer Science.</span>
+              I fell in love with programming && I have at least learnt something, I think… 🤷‍♂️ I am fluent in classics
+              like <span> C, Python, Java and </span>My current focus is on <strong>Cyber
+              Security and Cloud Computing</strong>.<br> Whenever possible, I also apply my passion for developing
+              products. I'm passionate about
+              programming in C/C++, Java, and web development. I'm also interested in exploring the world of computer
+              science, AI and its applications.<br> I'm an enthusiastic problem solver who loves to build ovative
+              solutions to complex issues. I'm a friendly,
+              outgoing person, and I'm always looking for new ways to <span>learn and grow</span>. I'm excited to see
+              what opportunities come my way and I'm ready to take on whatever challenges come my way.
+              <span>Thank you</span> for taking the time to <a href="#">find out more about me</a>. <br> I am a Web
+              Developer, and I'm very passionate and dedicated to my work With 10 years experience as a professional Web
+              Developer, I have acquired the skills and knowledge necessary to make your project a
+              success I enjoy every step of the design process, from discussion and collaboration.
+            </p>
+            <a class="button download" download="cv.pdf"><i class="fa fa-download"></i>Download CV</a>
+            <a class="button hire" href="#" onclick="contact();"><i class="fa fa-handshake"></i>Hire Me.</a>
+          </div>
+        </div>
+        <div class="face face2"></div>
+      </div>
+    </div>
+  </div>
+  <div class="layer layer3">
+    <div class="services main">
+      <p>SERVICES</p>
+    </div>
+  </div>
+  <div class="layer layer4">
+    <div class="portfolio main">
+      <p>PROJECTS</p>
+    </div>
+  </div>
+  <div class="layer layer5">
+    <div class="testimonial">
+      <h1>
+        <span>See What My Clients Say about Me.</span>
+      </h1>
+    </div>
+  </div>
+  <div class="layer layer6">
+    <div class="contact_us">
+
+      <address class="info_container">
+        <p>CONTACTS</p>
+      </address>
+    </div>
+  </div>
+</div>
+
+<!-----------------LOCAL (HOME)----------------->
+<script src="js/home.js"></script>
+<!-----------------LOCAL (ABOUT)----------------->
+<script src="js/about.js"></script>
+<!-----------------LOCAL (SERVICES)----------------->
+<script src="js/services.js"></script>
+<!-----------------LOCAL (PORTFOLIO)----------------->
+<script src="js/portfolio.js"></script>
+<!-----------------LOCAL (BLOG)----------------->
+<script src="js/blog.js"></script>
+<!-----------------LOCAL (CONTACT)----------------->
+<script src="js/contact.js"></script>
+<!-----------------LOCAL (MAIN FILE)----------------->
+<script src="js/main.js"></script>
+
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () {
+    ga.q.push(arguments)
+  };
+  ga.q = [];
+  ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'transport', 'beacon');
+  ga('send', 'pageview')
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+</body>
+
+</html>

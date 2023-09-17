@@ -1,0 +1,110 @@
+.navigation {
+  position: fixed;
+  top: 8vh;
+  left: 20px;
+  width: 0;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-gradient-onyx);
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 5px 0 5px #00000063,
+  10px 0 1px #0000004d,
+  20px 0 20px #0000004d,
+  3px 3px 5px black,
+  -3px -3px 5px #ffffff25;
+  z-index: 999;
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.navigation.active {
+  width: calc(50vh / 2);
+}
+
+.navigation img {
+  width: 200px;
+  margin: 30px;
+  border-radius: 50%;
+  box-shadow: 5px 0 5px #00000063,
+  10px 0 1px #9482824d,
+  20px 0 20px #433a3a4d,
+  3px 3px 5px rgb(36, 33, 33),
+  -3px -3px 5px #5a595925,
+  5px 0 5px #00000063,
+  10px 0 1px #0000004d,
+  20px 0 20px #0000004d;
+  transition: all 0.5s ease-in-out;
+}
+
+.navigation ul {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 20px;
+}
+
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  width: 200px;
+  margin: 10px 0;
+}
+
+.navigation ul li a {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: block;
+  padding: 10px 0;
+  color: lightsalmon;
+  background: var(--bg-gradient-onyx);
+  text-align: left;
+  padding-inline: 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 5px 0 5px #00000063,
+  10px 0 1px #0000004d,
+  20px 0 20px #0000004d,
+  3px 3px 5px black,
+  -3px -3px 5px #ffffff25;
+}
+
+.navigation ul li a::before,
+.navigation ul li a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 50%;
+  height: 70px;
+  background: #40568f;
+  /* background: var(--bg-gradient-yellow-2); */
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+}
+
+.navigation ul li a::after {
+  top: inherit;
+  bottom: 0;
+  left: inherit;
+  right: -100%;
+}
+
+.navigation ul li a:hover::before,
+.navigation ul li a.active::before {
+  left: 0;
+}
+
+.navigation ul li a:hover::after,
+.navigation ul li a.active::after {
+  right: 0;
+}

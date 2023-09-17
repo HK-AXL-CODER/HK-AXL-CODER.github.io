@@ -1,0 +1,180 @@
+.home {
+  background: var(--bg-gradient-onyx);
+  z-index: 2;
+}
+
+.content-for-home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content-for-home .greet,
+.content-for-home .typewriter {
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* hand wave */
+.content-for-home .greet.hand-wave {
+  animation-name: wave-animation;
+  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.1s;
+  /* Change to speed up or slow down */
+  animation-iteration-count: infinite;
+  /* Never stop waving     :) */
+  transform-origin: 70% 70%;
+  /* Pivot around the bottom-left palm */
+  float: left;
+  padding-inline: 10px;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(14deg);
+  }
+
+  /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+
+  30% {
+    transform: rotate(14deg);
+  }
+
+  40% {
+    transform: rotate(-4deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  60% {
+    transform: rotate(0deg);
+  }
+
+  /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.content-for-home .img-container {
+  position: absolute;
+  display: none;
+  width: 400px;
+  height: 400px;
+  background: url("../img/logo (8).png") no-repeat top left;
+  background-size: cover;
+  border-radius: 25px;
+  box-shadow: 5px 0 5px #00000063,
+  10px 0 1px #0000004d,
+  5px 0 5px #00000063,
+  10px 0 1px #0000004d,
+  20px 0 20px #0000004d,
+  20px 0 20px #0000004d;
+}
+
+.content-for-home .img-container img {
+  object-fit: cover;
+}
+
+.content-for-home .social-icons {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.content-for-home .social-icons .heading,
+.s-name {
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 100%;
+}
+
+.content-for-home .social-icons .s-icon {
+  position: relative;
+  margin: 25px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 5px 0 5px #00000063,
+  10px 0 1px #0000004d,
+  20px 0 20px #0000004d;
+  transition: 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.content-for-home .social-icons .s-icon a {
+  color: #606d79;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 20px;
+  transition: 0.7s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.content-for-home .social-icons .s-icon a i {
+  font-size: 35px;
+}
+
+.content-for-home .social-icons .s-icon .s-name {
+  position: absolute;
+  font-size: 15px;
+  opacity: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: 0.7s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.content-for-home .social-icons .s-icon:hover .s-name {
+  opacity: 1;
+  bottom: -35px;
+}
+
+.content-for-home .social-icons .s-icon:hover a {
+  color: dodgerblue;
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 491px) {
+}
+
+@media (max-width: 306px) {
+  .content-for-home .img-container {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 400px) {
+  .content-for-home .img-container {
+    width: 200px;
+    height: 200px;
+    background: url("../img/logo (4).png") no-repeat top left;
+    background-size: cover;
+  }
+
+  .content-for-home .img-container:hover {
+    scale: 1;
+  }
+}

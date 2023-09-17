@@ -1,0 +1,257 @@
+/*styles*/
+/*
+.styling {
+  background: var(--bg01);
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+*/
+.styling {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.absolute {
+  position: absolute;
+  user-select: none;
+}
+
+.box {
+  top: 95%;
+  left: 8%;
+  width: 30px;
+  height: 30px;
+  border: 5px solid #b105ca;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  animation: rotate 5s linear 0s infinite forwards;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.circle {
+  top: 50px;
+  left: 30%;
+  border: 10px solid #d0154e;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: fader 5s linear 0s infinite forwards;
+}
+
+@keyframes fader {
+  10% {
+    opacity: 0;
+    color: lightgoldenrodyellow;
+  }
+  50% {
+    opacity: 100%;
+    color: #0b33c2;
+  }
+  100% {
+    color: #1fe6ff;
+  }
+
+}
+
+.triangle {
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -60%) rotate(190deg);
+  border-top: 20px solid #21d5ab67;
+  border-left: 20px solid #21d5ab67;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  z-index: 1;
+  animation: up_down 5s ease-in-out 0s infinite forwards;
+}
+
+@keyframes up_down {
+  0%,
+  100% {
+    transform: translate(-80%, -80%) rotate(190deg);
+  }
+
+  50% {
+    transform: translate(200%, 100%) rotate(190deg);
+  }
+}
+
+.triangle::before {
+  content: "";
+  position: absolute;
+  top: 90%;
+  left: 90%;
+  border-top: 20px solid #267ff4;
+  border-left: 20px solid #267ff4;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  transform: translate(-90%, -90%);
+  z-index: -1;
+}
+
+.styling::before {
+  content: '';
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  background: var(--gradient);
+  transform: translate(-700px, -250px);
+}
+
+.styling::after {
+  content: '';
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  background: linear-gradient(#08ffe8, #fcd200);
+  transform: translate(700px, 250px);
+}
+
+.styling .ball-1 {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  transform: translate(250px, 200px);
+  background: linear-gradient(#08effd, #ffff00);
+  position: absolute;
+  animation: fader 5s ease-in-out 2s infinite forwards;
+}
+
+.styling .ball-2 {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  transform: translate(10px, 220px);
+  background: linear-gradient(#08effd, rgb(32, 16, 47));
+  position: absolute;
+  animation: dash 5s ease-in-out 3s infinite forwards;
+}
+
+.styling .ball-3 {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  transform: translate(150px, 300px);
+  background: linear-gradient(#08effd, #0b33c2);
+  position: absolute;
+
+}
+
+/*content*/
+.wave {
+  bottom: 80px;
+  left: 0;
+  stroke-width: 10px;
+  stroke: #1c2635;
+  fill: transparent;
+  z-index: 0;
+  stroke-linecap: round;
+  stroke-dasharray: 3400px;
+  stroke-dashoffset: 3400px;
+  animation: dash 5s ease-in-out 1s infinite forwards;
+}
+
+.wave.opposite {
+  top: 50%;
+  bottom: inherit;
+  transform: rotateX(180deg);
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 6800px;
+  }
+
+  45% {
+    stroke-dashoffset: 3400px;
+  }
+
+  90% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+
+  100% {
+    fill: #1c2635;
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.face.face1 h1 {;
+  font-size: 4.5vw;
+}
+
+.content {
+  font-family: "Kaushan Script", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(20px);
+  text-align: center;
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.7rem;
+  margin-inside: 10%;
+}
+
+/*
+.face.face1 p {
+  font-family: "League Script", cursive;
+  font-size: 1.5rem;
+  text-align: center;
+  word-wrap: break-word;
+  border-radius: 20px;
+  margin: 50px 10px 0 10px;
+  padding: 10px;
+  animation: fade 5s ease-in-out 0s forwards;
+}
+*/
+
+.button {
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  outline: none;
+  box-shadow: 5px 0 5px #00000063,
+  10px 0 1px #9482824d,
+  20px 0 20px #433a3a4d,
+  3px 3px 5px rgb(36, 33, 33),
+  -3px -3px 5px #5a595925,
+  5px 0 5px #00000063,
+  10px 0 1px #0000004d,
+  20px 0 20px #0000004d;
+}

@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --width: calc(100vw - 250px);
+  font-family: "Montserrat", "Gill Sans", "Gill Sans MT", Calibri,
+  "Trebuchet MS", sans-serif;
+  color: white;
+}
+
+::selection {
+  background: #a640f5;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+article {
+  user-select: none;
+}
+
+a {
+  color: white;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  display: none;
+  /*background: #9900ba;
+  border-radius: 44px;
+  z-index: 1000;*/
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  margin-left: 0;
+  min-height: 100vh;
+  background: var(--bg-gradient-onyx);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.layer {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  margin-left: 100%;
+  overflow-x: hidden;
+  transition: 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5),
+  0 0 10px rgba(0, 0, 0, .5),
+  0 0 20px rgba(0, 0, 0, .5);
+}
+
+.layer .main {
+  width: 100%;
+  height: 100vh;
+}
+
+.layer.active {
+  margin-left: 0;
+  transition-delay: .7s;
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    width: 0;
+  }
+
+  .container {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .layer {
+    width: 100%;
+  }
+
+  .layer.active {
+    margin-left: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.active ~ .container .layer.active {
+    margin-left: 250px;
+  }
+
+  .layer .main {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .about_container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 50vh;
+    width: 300vw;
+    margin-left: 0;
+    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .about_container.one {
+    margin-left: 0;
+  }
+
+  .about_container.two {
+    margin-left: -100vw;
+  }
+
+  .about_container.three {
+    margin-left: -200vw;
+  }
+
+  .tip {
+    margin-left: 0;
+  }
+}
