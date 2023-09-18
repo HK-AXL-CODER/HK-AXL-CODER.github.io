@@ -1,9 +1,3 @@
-.layer6 {
-  background-size: cover;
-  background: #0d1117 url("img/pexels-pixabay-262488.jpg") no-repeat center center;
-  background-blend-mode: difference;
-    filter: invert(1);
-}
 
 .layer6 .contact_us {
     position: relative;
